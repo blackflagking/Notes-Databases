@@ -1,0 +1,227 @@
+recover database using backup controlfile恢复测试
+本次测试recover database using backup controlfile与recover database using backup controlfile until cancel
+
+测试前准备：
+在测试前，先在关库情况下对控制文件做冷备
+
+shutdown immediate;
+[oracle@gs orcl]$ cp control1.ctl bak/control1.ctl
+1
+2
+recover database using backup controlfile
+开始测试：
+1、手动执行检查点
+
+SQL> alter system checkpoint;
+使scn写入到控制文件以及数据文件头部
+1
+2
+2、使用之前备份的控制文件，重启数据库
+
+SQL> shutdown immediate;
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+
+
+[oracle@gs orcl]$ mv control1.ctl control1.ctl.old
+
+[oracle@gs orcl]$ cp bak/control1.ctl .
+
+
+SQL> startup;
+ORACLE instance started.
+
+Total System Global Area 4275781632 bytes
+Fixed Size                  2260088 bytes
+Variable Size             838861704 bytes
+Database Buffers         3422552064 bytes
+Redo Buffers               12107776 bytes
+Database mounted.
+ORA-01122: database file 1 failed verification check
+ORA-01110: data file 1: '/u01/app/oracle/oradata/orcl/system01.dbf'
+ORA-01207: file is more recent than control file - old control file
+可以发现，现在数据库已无法启动，提示数据文件scn比控制文件scn要新，控制文件的scn是旧的
+
+3、查看现在控制文件、数据文件scn
+
+控制文件scn
+
+SQL> select CHECKPOINT_CHANGE# from v$datafile;
+
+             CHECKPOINT_CHANGE#
+-------------------------------
+                 16286607296408
+                 16286607296408
+                 16286607296408
+                 16286607296408
+                 16286607296408
+
+数据文件头部scn
+
+SQL> select CHECKPOINT_CHANGE# from v$datafile_header;
+
+             CHECKPOINT_CHANGE#
+-------------------------------
+                 16286607296999
+                 16286607296999
+                 16286607296999
+                 16286607296999
+                 16286607296999
+
+  可以发现控制文件的scn ’16286607296408‘ 明显小于数据文件头部scn ’16286607296999‘
+1
+4、做recover database恢复
+
+ SQL> recover database;
+ORA-00283: recovery session canceled due to errors
+ORA-01122: database file 1 failed verification check
+ORA-01110: data file 1: '/u01/app/oracle/oradata/orcl/system01.dbf'
+ORA-01207: file is more recent than control file - old control file
+   还是会提示，数据文件比控制文件scn新
+
+5、加参数”using backup controlfile“再恢复
+
+SQL> recover database using backup controlfile;
+ORA-00279: change 16286607296408 generated at 06/12/2019 08:59:12 needed for
+thread 1
+ORA-00289: suggestion : /u01/arch/1_108_1006945479.dbf
+ORA-00280: change 16286607296408 for thread 1 is in sequence #108
+
+输入：
+`/u01/arch/1_108_1006945479.dbf`
+ORA-00308: cannot open archived log '/u01/arch/1_108_1006945479.dbf'
+ORA-27037: unable to obtain file status
+Linux-x86_64 Error: 2: No such file or directory
+Additional information: 3
+由于108还未归档，所以提示找不到文件
+
+输入：
+Specify log: {<RET>=suggested | filename | AUTO | CANCEL}
+/u01/app/oracle/oradata/orcl/redo1.log
+Log applied.
+Media recovery complete.
+这次使用redo log，恢复完毕
+
+打开数据库
+SQL> alter database open;
+alter database open
+*
+ERROR at line 1:
+ORA-01589: must use RESETLOGS or NORESETLOGS option for database open
+
+
+SQL> alter database open NORESETLOGS;
+alter database open NORESETLOGS
+*
+ERROR at line 1:
+ORA-01588: must use RESETLOGS option for database open
+
+控制文件丢失后需要使用RESETLOGS打开数据库
+SQL> alter database open RESETLOGS;
+
+Database altered.
+
+SQL> select CHECKPOINT_CHANGE# from v$datafile;
+
+             CHECKPOINT_CHANGE#
+-------------------------------
+                 16286607297003
+                 16286607297003
+                 16286607297003
+                 16286607297003
+                 16286607297003
+
+SQL> select CHECKPOINT_CHANGE# from v$datafile_header;
+
+             CHECKPOINT_CHANGE#
+-------------------------------
+                 16286607297003
+                 16286607297003
+                 16286607297003
+                 16286607297003
+                 16286607297003
+
+SQL> archive log list;
+Database log mode              Archive Mode
+Automatic archival             Enabled
+Archive destination            /u01/arch
+Oldest online log sequence     1
+Next log sequence to archive   1
+Current log sequence           1
+
+
+日志序号已重置，数据库恢复完毕
+
+recover database using backup controlfile until cancel
+1、手动执行检查点
+
+SQL> alter system checkpoint;
+使scn写入到控制文件以及数据文件头部
+1
+2
+2、使用之前备份的控制文件，重启数据库
+
+SQL> shutdown immediate;
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+
+
+[oracle@gs orcl]$ mv control1.ctl control1.ctl.old
+
+[oracle@gs orcl]$ cp bak/control1.ctl .
+
+
+SQL> startup;
+ORACLE instance started.
+
+Total System Global Area 4275781632 bytes
+Fixed Size                  2260088 bytes
+Variable Size             838861704 bytes
+Database Buffers         3422552064 bytes
+Redo Buffers               12107776 bytes
+Database mounted.
+ORA-01122: database file 1 failed verification check
+ORA-01110: data file 1: '/u01/app/oracle/oradata/orcl/system01.dbf'
+ORA-01207: file is more recent than control file - old control file
+
+3、使用”using backup controlfile until cancel“参数恢复
+
+SQL> recover database using backup controlfile until cancel;
+ORA-00279: change 16286607296947 generated at 06/12/2019 10:10:02 needed for
+thread 1
+ORA-00289: suggestion : /u01/arch/1_108_1006945479.dbf
+ORA-00280: change 16286607296947 for thread 1 is in sequence #108
+由于108号归档日志还未完成，这里使用107号归档日志
+
+Specify log: {<RET>=suggested | filename | AUTO | CANCEL}
+/u01/arch/1_107_1006945479.dbf
+ORA-00310: archived log contains sequence 107; sequence 108 required
+ORA-00334: archived log: '/u01/arch/1_107_1006945479.dbf'
+
+
+SQL> alter database open;
+alter database open
+*
+ERROR at line 1:
+ORA-01589: must use RESETLOGS or NORESETLOGS option for database open
+
+
+SQL> alter database open RESETLOGS;
+
+Database altered.
+
+SQL> archive log list;
+Database log mode              Archive Mode
+Automatic archival             Enabled
+Archive destination            /u01/arch
+Oldest online log sequence     1
+Next log sequence to archive   1
+Current log sequence           1
+
+使用归档日志进行不完全恢复
+
+总结
+recover database的原理是数据库使用控制文件的scn作为恢复的终点，将数据文件block恢复到控制文件所记录的scn为止。
+而使用recover database using backup controlfile;实际上是告诉数据库，我要联机日志的最大scn为终点，对数据文件在block级别进行恢复。recover database using backup controlfile until cancel,既可以完全恢复，也可以指定归档日志、联机日志不完全恢复。
