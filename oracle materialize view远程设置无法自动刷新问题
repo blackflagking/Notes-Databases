@@ -1,0 +1,29 @@
+alter system set job_queue_processes =5
+Windows端其中job_queue_process的值要大于0才能实现自动刷新
+
+
+有关oracle11g的job_queue_processes参数问题
+原创 Oracle 作者：hz_ganwei 时间：2018-05-22 09:54:59  1627  0
+最近在一个oracle11g数据库里面新建了一个job，job不会在设定的时间运行。但是手动运行是可以的。后来网上找到原因，是因为job_queue_processes的参数设置问题：
+1. job_queue_processes取值范围为0到1000
+2. 当设定该值为0的时候则任意方式创建的job都不会运行。
+3. 当设定该值大于1时，且并行执行job时，至少一个为协调进程。其总数不会超出job_queue_processes的值。
+
+在命令行执行  show  parameter  job_queue_process;命令查看job_queue_processes参数：
+
+SQL> show  parameter  job_queue_process;
+NAME                                 TYPE        VALUE
+------------------------------------ ----------- ------------------------------
+job_queue_processes                  integer     0
+
+参数值为0，表示不会运行job任务。
+
+要想运行job任务，需要设置job_queue_processes 的参数值大于0，设置命令：ALTER SYSTEM SET job_queue_processes = 10; 这个10可以根据需要进行更改为1到1000之间的数字。
+SQL> ALTER SYSTEM SET job_queue_processes = 10;
+System altered
+
+-- 再次查看job_queue_process参数值
+SQL> show  parameter  job_queue_process;
+NAME                                 TYPE        VALUE
+------------------------------------ ----------- ------------------------------
+job_queue_processes                  integer     10

@@ -1,2 +1,0 @@
-alter system set job_queue_processes =5
-Windows端其中job_queue_process的值要大于0才能实现自动刷新
