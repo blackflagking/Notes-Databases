@@ -1,0 +1,49 @@
+关于recover database using backup control file
+
+也就是说，不加using backup controlfile的情况。
+在普通的recover database 或者 recover tablespace, recover datafile时， Oracle会以当前controlfile所纪录的SCN为准，利用archive log和 redo log的redo entry, 把相关的datafile 的 block恢复到“当前controlfile所纪录的数据文件的SCN”
+而某些情况下，Oracle需要把数据恢复到比当前controlfile所纪录的SCN还要靠后的位置（比如说，control file是backup controlfile , 或者 controlfile是根据trace create的。）,这时候，就需要用using backup controlfile. 恢复就不会受“当前controlfile所纪录的SCN”的限制。
+这时候的限制就来自于你的语句(until time , until scn)，或者可用的archive log(until cancel) ...
+
+如果不加限制就要恢复到当先联机日志的最大SCN
+
+*上面都讨论的是终点，恢复的起点的问题：
+
+首先用这个2个命令的时候基本都是数据文件是配套的（所谓配套就是我一个时间点备份的数据文件，因为如果不配套使用的话，基本就两种情况：①我system表空间单独坏了②我非系统表空间单独坏了；这两种情况我就recover datafile了行吗.....别闹！）
+
+1、recover database 这个呢很简单，就是比对system表空间的启动SCN（v$datafile_header）和控制文件中记录的SCN（v$datafile），如果一直则不能恢复，不一致就从system数据文件的启动SCN开始整体的恢复~~~  也就是说用它的时候基本就是控制文件比数据文件往后，然后恢复到控制文件所记录的数据文件的SCN
+
+2、recover database using backup controlfile  
+
+（其实我想过这样的情况：我system表空间没事儿，不用恢复，但是我有非系统表空间需要恢复，我在mount下用recover database using backup controlfile去恢复，我试验了，确实可以把非系统表空间的也给恢复好了，因为recover database 是整体的嘛
+
+我recover database using backup controlfile后，oracle也是先从system的启动scn开始恢复，然后我先回复了system后，resetlogs想开库的时候，oracle不让我开，报错说那个非系统表空间需要恢复，然后我再recover database using backup controlfile去恢复，就从那个这个坏了的非系统表空间的数据文件的启动SCN开始整体恢复了....
+
+但是我后来又想了想，这种情况基本不会出现啊~~~谁有毛病在system表空间没坏的情况下，跑到mount的状态下去恢复非系统表空间？我在线恢复好不好？有包啊，所以这种情况不用考虑了）
+
+那说说正常的情况吧：首先你数据文件基本也都是配套的，那也是从system的启动scn开始恢复了~~~还写啥。。。。
+
+写着写这我发现，基本就可以总结成一句话了。。。。。就是从system的启动scn开始恢复！
+
+***那这么说我全备份的时候最好先备份system表空间喽（备份的过程中SCN也在走啊....保证system备份出来的SCN最小呗，这样我recover database的时候才准啊，我猜的啊。。。。）
+
+
+
+写的太乱了，总结一下:
+
+①起点就是从system的启动scn开始恢复
+
+②用这两个命令，数据文件基本都是配套的
+
+③全备的时候，先备份system表空间，这样备出来的system表空间的SCN最小.....方面我recover database  （这条我猜的）
+
+--------------------------------------------------------------------------------------
+
+recover database using backup controlfile;      ----不加限制条件就要恢复到我的联机日志状态，否则我resetlogs打开数据库就报错：
+
+ ORA-01113: file 1 needs media recovery
+
+ ORA-01110: data file 1: '/u01/app/oracle/oradata/test/system01.dbf'
+
+recover database using backup controlfile until cancel;        --------这句话就是：恢复到我不想恢复为止(我可以随意的用resetlogs打开数据库)
+
