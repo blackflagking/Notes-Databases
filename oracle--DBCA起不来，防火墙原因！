@@ -1,0 +1,55 @@
+完美解决xhost +报错： unable to open display ""
+
+X manager
+详细很多朋友在装oracle的时候总是在弹出安装界面的时候出错，界面就是蹦不出来。
+
+oracle安装
+
+先切换到root用户，执行xhost +
+
+然后再切换到oracle用户，执行export DISPLAY=:0.0
+
+出现乱码执行export LANG=US_en
+
+在这里给大家介绍下两种情况的常见问题：
+
+一种是本地运行的命令，另一种则是远程ssh命令安装。
+
+DISPLAY科普
+
+DISPLAY变量是用来设置将图形显示到何处.比如CENTOS,你用图形界面登录进去,DISPLAY自动设置为DISPLAY=:0.0表示显式到本地监视器,那么通过终端工具(例如:xshell)进去,运行图形界面的程序,如果没有设置,系统是不允许程序启动的。
+在执行xhost +命令（使得所有客户都可以访问）
+
+正常返回信息为：
+access control disabled,clients can connect from any host
+
+如果xhost +不能执行，报错：xhost ：  unable to open display ""
+
+可以输入命令export DISPLAY=:0执行一下
+
+再执行xhost +
+
+xhost + ip （name表示该ip机器可以使用该服务）
+
+远程ssh安装
+
+先安装xmanager，自行百度下载安装，否则无法弹窗。
+
+先切换到root用户，执行xhost +（）
+
+正常返回：access control disabled,clients can connect from any host
+
+切回oracle用户，执行：export DISPLAY=192.168.1.2：0.0
+
+比如你的oracle服务器ip是192.168.0.1，访问的客户端的ip是192.168.1.2，当你用192.168.1.2连接上数据库后，希望在192.168.1.2上显示图像界面，这是就需要export DISPLAY=192.168.1.2：0.0
+
+再执行oracle安装文件，会提示弹窗授权：
+
+unable to open display
+
+ 
+
+点击是后，会正常弹窗。
+
+如果在弹窗之后出现了如下错误：
+
