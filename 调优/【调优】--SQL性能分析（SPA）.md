@@ -1,12 +1,12 @@
-#【调优】SQL性能分析--（SPA）--
+# 【调优】SQL性能分析--（SPA）--
 
-##what
+## what
 SPA是11G新特性
-##why
+## why
 主要是检测升级之后性能退化的SQL语句
-##where
+## where
 升级、迁移、参数修改、I/O子系统变更
-##how
+## how
 1、在primary database上捕获SQL负载、生成SQL Tunning Set   
 2、建立中转表，将SQL Tunning Set倒入中转表，导出中转表并转到auxiliary database    
 3、在auxiliary database上导入中准表，并解压中转表的数据到SQL Tunning Set    
