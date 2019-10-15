@@ -4,4 +4,4 @@
  
 
 
- insert语句主要考察存储架构放面问题，即，段区块。
+ <font color=#0099ff size=7 face="黑体">insert语句主要考察存储架构放面问题，即，段区块。</font>
