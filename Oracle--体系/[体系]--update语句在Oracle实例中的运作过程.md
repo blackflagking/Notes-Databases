@@ -2,6 +2,11 @@
 ### 作者:coresu
 ### 时间:2019:10:13  
 
+
+
+![update执行图片](./picture--update/update.jpg)
+
+
 ### update数据主要进入如下四个阶段：  
 1. shared pool阶段 
 2. buffer pool阶段
