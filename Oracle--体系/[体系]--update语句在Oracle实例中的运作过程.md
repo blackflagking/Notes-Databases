@@ -4,10 +4,10 @@
 
 
 
-![update执行图片](./picture--update/update.jpg)
+![update执行图片](./picture/picture--update/update.jpg)
 
 
-### update数据主要进入如下四个阶段：  
+### update数据法大致分为如下四个阶段：  
 1. shared pool阶段 
 2. buffer pool阶段
 3. redo log buffer阶段
@@ -15,7 +15,7 @@
 
 #### shared pool阶段
 1. 一条语句在SGA的shared_pool中的library cache中在parse阶段首先拿到执行计划， 
-<font color="red">执行计划六阶段：open-->parse-->bind-->execute-->fetch-->close</font>
+<font color="red">SQL语句执行六阶段：open-->parse-->bind-->execute-->fetch-->close</font>
 在执行阶段(execute)将准备更新的最新数值(数据)写入database buffer cache中的缓存的数据块。
 
 #### buffer pool阶段  
