@@ -1,4 +1,4 @@
-# NFS权限问题
+# NFS权限问题--root用户出现Permission denied
 ### 作者:coresu   
 ### 时间:2019-10-22
 
