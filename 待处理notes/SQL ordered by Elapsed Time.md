@@ -11,9 +11,6 @@
         to_char(t.end_interval_time, 'yyyy-mm-dd hh24:mi:ss') as "快照结束时间"
    from DBA_HIST_SNAPSHOT t
   order by snap_id desc;
-       select * from dba_hist_snapshot x ;
-       select * from v$database;
-       select * from v$instance;
 ```
 
 2. 执行以下SQL，查询S执行时间最长的前10条SQL语句 
