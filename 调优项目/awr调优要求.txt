@@ -1,0 +1,64 @@
+1°¢Ω˚”√sga◊‘∂Øπ‹¿Ìª˙÷∆£¨∑÷≈‰±»Ωœ–°µƒ ˝æ›ª∫≥Â«¯(30m)∫Õπ≤œÌ≥ÿ(70m)ø’º‰£¨πÿ±’PGA◊‘∂Øµ˜”≈£¨∑÷≈‰£®30m£©°£Õ¨ ±≤ø sp£¨√ø∏Ù5∑÷÷”≤˙…˙“ª∏ˆøÏ’’£¨øÏ’’µƒº∂±Œ™7º∂°£
+
+2°¢¥¥Ω®–Ú¡–£∫
+CREATE SEQUENCE emp2_empno
+           START WITH 1
+  	   INCREMENT BY 1
+  	   MAXVALUE 100000000
+  	   CACHE 10000
+  	   NOCYCLE;
+
+3°¢Õ˘–¬Ω®µƒ±Ì≤Â»Î ˝æ›£∫
+
+SQL> create table emp2 as select * from emp where 1=2;
+SQL>  alter table emp2 modify empno number(10);
+SQL>  alter table emp2 modify ENAME varchar2(30);
+SQL> alter table emp2 nologging;
+
+begin
+  for i in 1..20000000 loop
+    insert into emp2 nologging
+    values (emp2_empno.nextval,'cuug'||i,'SALESMAN',7698,sysdate,1600,300,30);
+    if mod(i,1000)=0 then 
+    commit;
+    end if;
+  end loop;
+  commit;
+end;
+
+–Ë“™¥Û‘º10-20∑÷÷”
+»Áπ˚¥≈≈Ãø’º‰”–œﬁ£¨“≤ø…‘⁄≤Â»Î ˝æ›«∞…Ë≥…∑«πÈµµƒ£ Ω£¨Ω⁄ °6Gø’º‰°£
+
+4°¢‘À––≤È—Ø“µŒÒ£∫
+  
+[oracle@db bin]$ more share_pool_sql_1.sh 
+#!/bin/bash
+
+CNT=1
+while [ $CNT -lt 20000000 ]
+do
+sqlplus scott/scott <<EOF
+select * from emp2 where empno=$CNT;
+exit
+EOF
+CNT=`expr $CNT + 1`
+done  
+
+
+5°¢∏˘æ›øÏ’’≤˙…˙2∏ˆ“‘…œµƒ±®∏Ê£¨πÿ◊¢:
+
+1°¢πÿ◊¢load profile(π§◊˜∏∫‘ÿ£©£¨¬ﬂº≠∂¡°¢ŒÔ¿Ì∂¡°¢”≤Ω‚Œˆ°¢µ«¬º¥Œ ˝°¢÷¥––¥Œ ˝°£
+2°¢πÿ◊¢ ˝æ›ª∫≥Â«¯√¸÷–¬ £¨∏˜∏ˆ ±º‰∂ŒµƒæﬂÃÂÕ≥º∆°£
+3°¢top 5œ‡πÿµƒµ»¥˝ ¬º˛£¨∏˜∏ˆ ±º‰∂ŒµƒæﬂÃÂÕ≥º∆°£
+4°¢πÿ◊¢time model system stats £®hard parse elaped time£¨connect ...
+5°¢πÿ◊¢‘Ï≥…ŒÔ¿Ì∂¡◊Ó¥ÛµƒSQL”Ôæ‰£¨≤˙…˙÷¥––º∆ªÆ£®∫À–ƒƒ⁄»›£©
+6°¢πÿ◊¢advisoryµƒΩ®“È
+
+≤Èø¥sp±®∏Ê£¨Ã·≥ˆ¥Ê‘⁄µƒŒ Ã‚£¨÷¡…Ÿ»˝∏ˆ£¨Ω‚ Õ∑¢…˙µƒ‘≠“Ú£¨Ã·≥ˆΩ®“Èº∞Ω‚æˆ∑Ω∞∏°£
+
+Ω‚æˆµ⁄“ª∏ˆŒ Ã‚£¨»ª∫Û‘Ÿ¥Œ ’ºØSP£¨µ√≥ˆ∑÷ŒˆΩ·π˚
+
+Ω‚æˆµ⁄∂˛∏ˆŒ Ã‚£¨»ª∫Û‘Ÿ¥Œ ’ºØSP£¨µ√≥ˆ∑÷ŒˆΩ·π˚
+
+Ω‚æˆµ⁄»˝∏ˆŒ Ã‚£¨»ª∫Û‘Ÿ¥Œ ’ºØSP£¨µ√≥ˆ∑÷ŒˆΩ·π˚
+--------------------------------------------------------------------
