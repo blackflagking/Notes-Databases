@@ -13,6 +13,7 @@ ora-01555错误在Oracle 8i的时候经常出现此错误，当数据库已经�
 *. unexpired（到期态）：表示事务已经结束，unexpired态空间中的数据可以随时被覆盖，unexpired是expired的下一个阶段，超过undo_retention时间的数据便从expired态进入到expired态。
 *. free（自由态）：自由态一般实在undo刚创建或拓展的时候出现。 
 
+![状态关系图](./ORA-01555/UNDO表空间四中状态关系图.jpg)
 
 
 ### ora-01555错误减少的原因
