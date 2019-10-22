@@ -3,9 +3,22 @@
 ### 时间:2019-10-22  
 
 
+
+
 ### ora-01555快照过旧错误
 
 ora-01555错误在Oracle 8i的时候经常出现此错误，当数据库已经迭代到11g的时候，已经可以做到错误大量减少，但仍不可避免。  
+
+### OERR提示 
+```shell
+[oracle@coresu ~]$ oerr ora 01555
+01555, 00000, "snapshot too old: rollback segment number %s with name \"%s\" too small"
+// *Cause: rollback records needed by a reader for consistent read are
+//     overwritten by other writers
+// *Action: If in Automatic Undo Management mode, increase undo_retention
+//          setting. Otherwise, use larger rollback segments
+```
+
 
 ### undo表空间中空间四种状态：
 
