@@ -8,10 +8,11 @@
 ora-01555错误在Oracle 8i的时候经常出现此错误，当数据库已经迭代到11g的时候，已经可以做到错误大量减少，但仍不可避免。  
 
 ### undo表空间中空间四种状态：
-*. active（活跃态）：表示事务还没有结束，为了提供多版本一致性读，undo表空间active态空间不可以被覆盖。
-*. expired（未到期态）：表示事务已经结束，包含commit和rollback的数据，在undo_retention保留期内Oracle尽力不然让数据被覆盖，但当时间实在不足时也可进行覆盖Oracle至今尽力做到不覆盖expired态空间中的内容。  
-*. unexpired（到期态）：表示事务已经结束，unexpired态空间中的数据可以随时被覆盖，unexpired是expired的下一个阶段，超过undo_retention时间的数据便从expired态进入到expired态。
-*. free（自由态）：自由态一般实在undo刚创建或拓展的时候出现。 
+
+* active（活跃态）：表示事务还没有结束，为了提供多版本一致性读，undo表空间active态空间不可以被覆盖。
+* expired（未到期态）：表示事务已经结束，包含commit和rollback的数据，在undo_retention保留期内Oracle尽力不然让数据被覆盖，但当时间实在不足时也可进行覆盖Oracle至今尽力做到不覆盖expired态空间中的内容。  
+* unexpired（到期态）：表示事务已经结束，unexpired态空间中的数据可以随时被覆盖，unexpired是expired的下一个阶段，超过undo_retention时间的数据便从expired态进入到expired态。
+* free（自由态）：自由态一般实在undo刚创建或拓展的时候出现。 
 
 ![状态关系图](./ORA-01555/UNDO表空间四中状态关系图.jpg)
 
