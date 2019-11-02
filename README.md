@@ -36,7 +36,7 @@
     - [Oracle学习中常见问题汇总](#java学习常见问题汇总)
     
 - [Oracle学习中常见问题汇总](#java学习常见问题汇总)
-    - [Oracle&#32;materialize&#32;view无法自动刷新问题.md](./Oracle--常见问题/Oracle&#32;materialize&#32;view无法自动刷新问题.md)
+    - [Oracle&#32;materialize&#32;view无法自动刷新问题.md](./Oracle--常见问题/Oracle%20materialize%20view无法自动刷新问题.md)
     - [Oracle--DBCA起不来的防火墙原因](./Oracle--常见问题/Oracle--DBCA起不来的防火墙原因.md)
     - [Oracle备份恢复之recover database的四条语句区别](./Oracle--常见问题/Oracle备份恢复之recover database的四条语句区别.md)
     - [Oracle数据库在truncate不能flashback table的原因](./Oracle--常见问题/Oracle数据库在truncate不能flashback table的原因.md)
