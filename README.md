@@ -1,8 +1,8 @@
-<p align="center" style="font-weight:bold;"> <font size="30" }>Coresu的Oracle学习笔记</font></p>
+<p align="center" style="font-weight:bold;"> <font size="30">Coresu的Oracle学习笔记</font></p>
 
 
 <p align="center">
-<a href="https://github.com/Snailclimb/JavaGuide" target="_blank">
+<a href="https://github.com/blackflagking/Notes-Oracle" target="_blank">
     <img src="https://thumbnail0.baidupcs.com/thumbnail/f2caf679995a2c4470b63ddf72a04083?fid=2977596842-250528-601656470218205&time=1572685200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-z0xnjgf1Dea%2BZd5BTCSX2VZ5SD4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7090963443295851244&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video" width="250"/>
 </a>
 </p>
@@ -10,8 +10,8 @@
 <p align="center">
   <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/introduction-to-oracle-database.html#GUID-A42A6EF0-20F8-4F4B-AFF7-09C100AE581E"><img src="https://img.shields.io/badge/阅读-read-brightgreen.svg" alt="阅读"></a>
   <a href="#联系我"><img src="https://img.shields.io/badge/chat-微信-blue.svg" alt="微信"></a>
-  <a href="#公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-JavaGuide-lightgrey.svg" alt="公众号"></a>
-  <a href="#公众号"><img src="https://img.shields.io/badge/PDF-Java面试突击-important.svg" alt="公众号"></a>
+  <a href="#公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-OracleGuide-lightgrey.svg" alt="公众号"></a>
+  <a href="#公众号"><img src="https://img.shields.io/badge/PDF-Oracle面试突击-important.svg" alt="公众号"></a>
   <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
   <a href="https://xiaozhuanlan.com/javainterview?rel=javaguide"><img src="https://img.shields.io/badge/Oracle-面试指南-important" alt="投稿"></a>
 </p>
@@ -26,16 +26,67 @@
 ## 目录
 
 - [Oracle](#java)
-    - [体系](#基础)
-    - [备份恢复](#容器)
-    - [单实例调优](#并发)
-    - [ASM相关问题](#)
-    - [DG-DataGuard](#)
-    - [OGG-GoldrenGate](#io)
-    - [RAC-Real Application Cluster](#java-8)
+    - [体系](#体系)
+    - [备份恢复](#备份恢复)
+    - [实例调优](#实例调优)
+    - [ASM相关问题](#ASM相关问题)
+    - [DG-DataGuard](#DG-DataGuard)
+    - [OGG-GoldrenGate](#OGG-GoldrenGate)
+    - [RAC-Real Application Cluster](#RAC-Real Application Cluster)
     - [Oracle学习中常见问题汇总](#java学习常见问题汇总)
     
 - [Oracle学习中常见问题汇总](#java学习常见问题汇总)
+    - [Oracle materialize view无法自动刷新问题](./Oracle--常见问题/Oracle materialize view无法自动刷新问题.md)
+    - [Oracle--DBCA起不来的防火墙原因](./Oracle--常见问题/Oracle--DBCA起不来的防火墙原因.md)
+    - [Oracle备份恢复之recover database的四条语句区别](./Oracle--常见问题/Oracle备份恢复之recover database的四条语句区别.md)
+    - [Oracle数据库在truncate不能flashback table的原因](./Oracle--常见问题/Oracle数据库在truncate不能flashback table的原因.md)
+    - [Oracle查询表空间使用情况以及其他查询](./Oracle--常见问题/Oracle查询表空间使用情况以及其他查询.md)
+    - [Oracle正常安装sqlplus命令无法登录](./Oracle--常见问题/Oracle正常安装sqlplus命令无法登录.md)
+    - [当数据库出现OC4J Configuration issue](./Oracle--常见问题/当数据库出现OC4J Configuration issue.md)
+    - [恢复数据库后以read only打开提示recovery的原因](./Oracle--常见问题/恢复数据库后以read only打开提示recovery的原因.md)
+    - [数据泵在调优过程中的作用](./Oracle--常见问题/数据泵在调优过程中的作用.md)
+    - [如何查看日志切换的时间](./Oracle--常见问题/如何查看日志切换的时间.md)
+    - [诊断Oracle Redo Log引发的性能问题](./Oracle--常见问题/诊断Oracle Redo Log引发的性能问题.md)
+    - [验证表空间是否自动回收空间](./Oracle--常见问题/验证表空间是否自动回收空间.md)
+
+- [体系](#体系)
+    - [【体系】--Insert语句在Oracle实例中的的运作流程](./Oracle--体系/【体系】--Insert语句在Oracle实例中的的运作流程.md)
+    - [【体系】--select语句在Oracle实例中的运作过程](./Oracle--体系/【体系】--select语句在Oracle实例中的运作过程.md)
+    - [【体系】--update语句在Oracle实例中的运作过程](./Oracle--体系/【体系】--update语句在Oracle实例中的运作过程.md)
+
+- [备份恢复](#备份恢复)
+    - [recover database using backup control file报system01.dbf文件修复](./Oracle--备份恢复/recover database using backup control file报system01.dbf文件修复.md) 
+
+
+- [实例调优](#实例调优)
+    - [【调优】--解析Direct Path Read](./Oracle--调优/【调优】--解析Direct Path Read.md)
+    - [【调优】--解读10046事件](./Oracle--调优/【【调优】--解读10046事件.md)
+    - [【调优】--解读10053事件](./Oracle--调优/【调优】--解读10053事件.md)
+    - [【调优】--解读自动维护任务](./Oracle--调优/【调优】--解读自动维护任务.md)
+
+
+- [ASM相关问题](#ASM相关问题)  
+    - [ASM的connect的和mounted的区别](./Oracle--ASM/ASM的connect的和mounted的区别.md)
+
+- [DG-DataGuard](#DG-DataGuard)
+    - [【DG】v$database的switchover_status字段sessions active阐述](./Oracle--DG/【DG】v$database的switchover_status字段sessions active阐述.md)
+    - [【DG】防火墙与SELINUX导致的DG主备库失连接](./Oracle--DG/【DG】防火墙与SELINUX导致的DG主备库失连接.md)
+
+
+ - [OGG-GoldrenGate](#OGG-GoldrenGate)
+    - [【OGG】OCI Error ORA-02291违反完整约束条件](./Oracle--OGG/【OGG】OCI Error ORA-02291违反完整约束条件.md)
+    - [【OGG】导致单向联通失败的几点原因](./Oracle--OGG/【【OGG】导致单向联通失败的几点原因.md)
+
+ - [RAC-Real Application Cluster](#RAC-Real Application Cluster)
+    - [【RAC】历史及简介](./Oracle--RAC/【RAC】历史及简介.md)
+    - [【RAC】常用命令总结](./Oracle--RAC/【RAC】常用命令总结.md)
+    - [【RAC】NFS权限问题root出现Permission denied](./Oracle--RAC/【RAC】NFS权限问题root出现Permission denied.md)
+    - [【RAC】RAC安装过程提示not a shared subnet错误](./Oracle--RAC/【RAC】RAC安装过程提示not a shared subnet错误.md)
+
+
+
+
+
 - [工具](#工具)
     - [Git](#git)
     - [Docker](#Docker)
