@@ -33,7 +33,7 @@
 * [DG-DataGuard](#DG-DataGuard)
 * [OGG-GoldrenGate](#OGG-GoldrenGate)
 * [RAC-Real&#32;Application&#32;Cluster](#RAC-Real-Application-Cluster)
-* [Oracle学习中常见问题汇总](#java学习常见问题汇总)
+* [Oracle学习中常见问题汇总](#Oracle学习中常见问题汇总)
     
 ### Oracle学习中常见问题汇总
 
@@ -112,7 +112,7 @@
 
 由于我个人能力有限，很多知识点无法涉及，或正在学习的路上；   
 因此你可以对知识进行补充。对于值得分享的文章将在本博文中展出；  
-你可以通过[Email](#email)方式向博主投稿或者纠错； 
+你可以通过[Email](#Email)方式向博主投稿或者纠错； 
 博主期待你的加入...
 
 ### 联系我
@@ -122,7 +122,8 @@
 ![个人微信](https://thumbnail0.baidupcs.com/thumbnail/8a100bc9acacae939f438ac2431346b5?fid=2977596842-250528-815582455701815&time=1572688800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-uTPmitKSJE5X4%2BD39XDqzymEN3E%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7091503216580004742&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
 
 大家也可以通过Email的方式联系我，记得在邮件中表明来自GitHub哦😛！  
-##### Email:coresu@icloud.com
+### Email
+Email:coresu@icloud.com
 
 
 ### Contributor
@@ -132,8 +133,8 @@
 <a href="https://github.com/blackflagking">
     <img src="https://thumbnail0.baidupcs.com/thumbnail/f2caf679995a2c4470b63ddf72a04083?fid=2977596842-250528-601656470218205&time=1572685200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-z0xnjgf1Dea%2BZd5BTCSX2VZ5SD4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7090963443295851244&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video" width="45px"></a>
 
-### 公众号
+### 微信公众号
 
 公众号还在积极筹备中...
 
-![我的公众号]()
+![我的公众号](https://thumbnail0.baidupcs.com/thumbnail/81ab6d08c2ee365eac78c27985964708?fid=2977596842-250528-505023496893925&time=1572710400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-rOnyuC43G7QjAUWv6KKdmtcVXBc%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7097424041099893392&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
