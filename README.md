@@ -10,7 +10,7 @@
 <p align="center">
   <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/introduction-to-oracle-database.html#GUID-A42A6EF0-20F8-4F4B-AFF7-09C100AE581E"><img src="https://img.shields.io/badge/阅读-read-brightgreen.svg" alt="阅读"></a>
   <a href="#联系我"><img src="https://img.shields.io/badge/chat-微信-blue.svg" alt="微信"></a>
-  <a href="#公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-OracleGuide-lightgrey.svg" alt="公众号"></a>
+  <a href="#微信公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-OracleGuide-lightgrey.svg" alt="公众号"></a>
   <a href="#公众号"><img src="https://img.shields.io/badge/PDF-Oracle面试突击-important.svg" alt="公众号"></a>
   <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
   <a href=""><img src="https://img.shields.io/badge/Oracle-面试指南-important" alt="投稿"></a>
