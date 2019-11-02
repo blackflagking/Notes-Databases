@@ -55,7 +55,7 @@
     - [【体系】--update语句在Oracle实例中的运作过程](./Oracle--体系/【体系】--update语句在Oracle实例中的运作过程.md)
 
 - [备份恢复](#备份恢复)
-    - [recover&#32;database&#32;using backup&#32;control&#32;file报system01.dbf文件修复](./Oracle--备份恢复/recover&#32;database&#32;using backup&#32;control&#32;file报system01.dbf文件修复.md) 
+    - [recover&#32;database&#32;using&#32;backup&#32;control&#32;file报system01.dbf文件修复](./Oracle--备份恢复/recover&#32;database&#32;using&#32;backup&#32;control&#32;file报system01.dbf文件修复.md) 
 
 
 - [实例调优](#实例调优)
