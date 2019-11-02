@@ -25,7 +25,8 @@
 
 ## 目录
 
-- [Oracle](#oracle)
+- ### Oracle
+- 
     - [体系](#体系)
     - [备份恢复](#备份恢复)
     - [实例调优](#实例调优)
@@ -35,7 +36,8 @@
     - [RAC-Real&#32;Application&#32;Cluster](#RAC-Real&#32;Application&#32;Cluster)
     - [Oracle学习中常见问题汇总](#java学习常见问题汇总)
     
-- [Oracle学习中常见问题汇总](#java学习常见问题汇总)
+### Oracle学习中常见问题汇总
+
     - [Oracle&#32;materialize&#32;view无法自动刷新问题.md](./Oracle--常见问题/oracle&#32;materialize&#32;view无法自动刷新问题.md)
     - [Oracle--DBCA起不来的防火墙原因](./Oracle--常见问题/Oracle--DBCA起不来的防火墙原因.md)
     - [Oracle备份恢复之recover&#32;database的四条语句区别](./Oracle--常见问题/Oracle备份恢复之recover&#32;database的四条语句区别.md)
@@ -49,35 +51,41 @@
     - [诊断Oracle&#32;Redo&#32;Log引发的性能问题](./Oracle--常见问题/诊断Oracle&#32;Redo&#32;Log引发的性能问题.md)
     - [验证表空间是否自动回收空间](./Oracle--常见问题/验证表空间是否自动回收空间.md)
 
-- [体系](#体系)
+### 体系
+
     - [【体系】--Insert语句在Oracle实例中的的运作流程](./Oracle--体系/【体系】--Insert语句在Oracle实例中的的运作流程.md)
     - [【体系】--select语句在Oracle实例中的运作过程](./Oracle--体系/【体系】--select语句在Oracle实例中的运作过程.md)
     - [【体系】--update语句在Oracle实例中的运作过程](./Oracle--体系/【体系】--update语句在Oracle实例中的运作过程.md)
 
-- [备份恢复](#备份恢复)
+### 备份恢复
     - [recover&#32;database&#32;using&#32;backup&#32;control&#32;file报system01.dbf文件修复](./Oracle--备份恢复/recover&#32;database&#32;using&#32;backup&#32;control&#32;file报system01.dbf文件修复.md) 
 
 
-- [实例调优](#实例调优)
+### 实例调优
+
     - [【调优】--解析Direct&#32;Path&#32;Read](./Oracle--调优/【调优】--解析Direct&#32;Path&#32;Read.md)
     - [【调优】--解读10046事件](./Oracle--调优/【【调优】--解读10046事件.md)
     - [【调优】--解读10053事件](./Oracle--调优/【调优】--解读10053事件.md)
     - [【调优】--解读自动维护任务](./Oracle--调优/【调优】--解读自动维护任务.md)
 
 
-- [ASM相关问题](#ASM相关问题)  
+- ### ASM相关问题
+- 
     - [ASM的connect的和mounted的区别](./Oracle--ASM/ASM的connect的和mounted的区别.md)
 
-- [DG-DataGuard](#DG-DataGuard)
+### DG-DataGuard
+
     - [【DG】v$database的switchover_status字段sessions&#32;active阐述](./Oracle--DG/【DG】v$database的switchover_status字段sessions&#32;active阐述.md)
     - [【DG】防火墙与SELINUX导致的DG主备库失连接](./Oracle--DG/【DG】防火墙与SELINUX导致的DG主备库失连接.md)
 
 
- - [OGG-GoldrenGate](#OGG-GoldrenGate)
+### OGG-GoldrenGate
+
     - [【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件](./Oracle--OGG/【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件.md)
     - [【OGG】导致单向联通失败的几点原因](./Oracle--OGG/【【OGG】导致单向联通失败的几点原因.md)
 
- - [RAC-Real&#32;Application&#32;Cluster](#RAC-Real&#32;Application&#32;Cluster)
+### RAC-Real&#32;Application&#32;Cluster
+
     - [【RAC】历史及简介](./Oracle--RAC/【RAC】历史及简介.md)
     - [【RAC】常用命令总结](./Oracle--RAC/【RAC】常用命令总结.md)
     - [【RAC】NFS权限问题root出现Permission&#32;denied](./Oracle--RAC/【RAC】NFS权限问题root出现Permission&#32;denied.md)
