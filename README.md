@@ -1,4 +1,4 @@
-<p align="center" style="font-weight:bold;"> <font size="30">Coresu的Oracle学习笔记</font></p>
+<h1 align="center">Coresu的Oracle学习笔记</h1>
 
 
 <p align="center">
@@ -13,7 +13,7 @@
   <a href="#公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-OracleGuide-lightgrey.svg" alt="公众号"></a>
   <a href="#公众号"><img src="https://img.shields.io/badge/PDF-Oracle面试突击-important.svg" alt="公众号"></a>
   <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
-  <a href="https://xiaozhuanlan.com/javainterview?rel=javaguide"><img src="https://img.shields.io/badge/Oracle-面试指南-important" alt="投稿"></a>
+  <a href=""><img src="https://img.shields.io/badge/Oracle-面试指南-important" alt="投稿"></a>
 </p>
 
 <h3 align="center">CORESU的BLOG</h3>
@@ -35,6 +35,12 @@
 * [RAC-Real&#32;Application&#32;Cluster](#RAC-Real-Application-Cluster)
 * [Oracle学习中常见问题汇总](#Oracle学习中常见问题汇总)
     
+- [资源](#资源)
+    - [书单](#书单)
+- [待办](#待办)
+- [说明](#说明)
+
+
 ### Oracle学习中常见问题汇总
 
 * [Oracle&#32;materialize&#32;view无法自动刷新问题.md](./Oracle--常见问题/oracle&#32;materialize&#32;view无法自动刷新问题.md)  
@@ -90,20 +96,25 @@
 * [【RAC】NFS权限问题root出现Permission&#32;denied](./Oracle--RAC/【RAC】NFS权限问题root出现Permission&#32;denied.md)
 * [【RAC】RAC安装过程提示not&#32;a&#32;shared&#32;subnet错误](./Oracle--RAC/【RAC】RAC安装过程提示not&#32;a&#32;shared&#32;subnet错误.md)
 
+### 书单  
+* Linux
+    - Linux命令行与shell脚本编程大全.第3版
+    - Linux命令行完全技术宝典
+    - linux网络安全技术与实现第二版
+* Oracle  
+    - SQL初学者指南＝THE+LANGUAGE+OF+SQL
+    - 名师讲坛：ORACLE SQL入门与实战经典_decrypted
+    - Oracle编程艺术++深入理解数据库体系结构+第三版
+    - Oracle数据库开发与应用
+    - Oracle+11g+从入门到精通(jb51.net)
+    - Oracle RAC核心技术详解
+    - Oracle 12c从入门到精通
 
 
 
 
-- [工具](#工具)
-    - [Git](#git)
-    - [Docker](#Docker)
-- [资源](#资源)
-    - [书单](#书单)
-- [待办](#待办)
-- [说明](#说明)
-
-### 为什么要做这个开源文档？
-
+### 说明  
+为什么要做这个开源文档？  
 最初源于博主想在学习技术的过程中，记录下自己学习的点滴。   
 相信大家一定经历过，一个小BUG因为自己的无助被困N天的痛苦经历。  
 博主也想借助GitHub这个平台将自己在学习Oracle过程中碰到的一些错误，以及是如何解决的分享给大家。
