@@ -33,7 +33,7 @@
 * [OGG-GoldrenGate](#OGG-GoldrenGate)
 * [RAC-Real&#32;Application&#32;Cluster](#RAC-Real-Application-Cluster)
 * [Oracle学习中常见问题汇总](#Oracle学习中常见问题汇总)  
-* [Oracle-11g官方文档翻译--高可用（High&#32;Availability）](#Oracle-11g官方文档翻译--高可用（High&#32;Availability）)
+* [Oracle-11g官方文档翻译--高可用（High&#32;Availability）](#Oracle-11g官方文档翻译--高可用（#High&#32;Availability）)
     - [前言](#前言)
     
 - [资源](#资源)
