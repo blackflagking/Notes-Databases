@@ -150,4 +150,4 @@ Email:coresu@icloud.com
 
 公众号还在积极筹备中...
 
-![我的公众号](https://gitee.com/coresu/MyPic/blob/master/Blog/公众号.jpg)
+![我的公众号](.ObjectPic/vxplatform.png )
