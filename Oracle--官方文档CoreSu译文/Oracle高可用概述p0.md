@@ -64,7 +64,7 @@ Oracle数据库的知识，Oracle RAC，和Oracle Data Guard（DG）的概念、
 
 
 # 
-<div align="center">  当前第0页  [下一页](./)</div>
+<div align="center">  当前第0页  [下一页](./Oracle高可用性p1.md)</div>
 
 # 
 
