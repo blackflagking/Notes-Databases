@@ -33,7 +33,7 @@
 * [OGG-GoldrenGate](#OGG-GoldrenGate)
 * [RAC-Real&#32;Application&#32;Cluster](#RAC-Real-Application-Cluster)
 * [Oracle学习中常见问题汇总](#Oracle学习中常见问题汇总)  
-* [Oracle-11g官方文档翻译--高可用（High Availability）](#Oracle-11g官方文档翻译--高可用（High Availability）)
+* [Oracle-11g官方文档翻译--高可用（High&#32;Availability）](#Oracle-11g官方文档翻译--高可用（High&#32;Availability）)
     - [前言](#前言)
     
 - [资源](#资源)
@@ -99,7 +99,7 @@
 * [【RAC】NFS权限问题root出现Permission&#32;denied](./Oracle--RAC/【RAC】NFS权限问题root出现Permission&#32;denied.md)
 * [【RAC】RAC安装过程提示not&#32;a&#32;shared&#32;subnet错误](./Oracle--RAC/【RAC】RAC安装过程提示not&#32;a&#32;shared&#32;subnet错误.md)
 
-### Oracle-11g官方文档翻译--高可用（High Availability）  
+### Oracle-11g官方文档翻译--高可用（High&#32Availability）  
 
 * ##### [前言](./Oracle--官方文档CoreSu译文/Oracle高可用概述p0.md)
 
