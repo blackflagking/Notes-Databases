@@ -2,7 +2,7 @@
 
 
 <p align="center">
-<a href="https://raw.githubusercontent.com/blackflagking/MyPic/master/Blog/head.jpg" width="250"/>
+<a href="https://gitee.com/coresu/MyPic/blob/master/Blog/head.jpg" width="250"/>
 </a>
 </p>
 
@@ -132,7 +132,7 @@
 
 添加我的微信备注“Github”,coresu便会**“通过”**您的好友请求。
 
-![个人微信](https://raw.githubusercontent.com/blackflagking/MyPic/master/Blog/%E5%BE%AE%E4%BF%A1.jpeg)
+![个人微信](https://gitee.com/coresu/MyPic/blob/master/Blog/微信.jpeg)
 
 大家也可以通过Email的方式联系我，记得在邮件中表明来自GitHub哦😛！  
 ### Email
@@ -144,10 +144,10 @@ Email:coresu@icloud.com
 本篇文章的贡献者现在仅有博主一人，期待更多人的加入，让更多人能够爱上数据库。
 
 <a href="https://github.com/blackflagking">
-    <img src="https://raw.githubusercontent.com/blackflagking/MyPic/master/Blog/head.jpg" width="45px"></a>
+    <img src="https://gitee.com/coresu/MyPic/blob/master/Blog/head.jpg" width="45px"></a>
 
 ### 微信公众号
 
 公众号还在积极筹备中...
 
-![我的公众号](https://raw.githubusercontent.com/blackflagking/MyPic/master/Blog/%E5%85%AC%E4%BC%97%E5%8F%B7.jpg)
+![我的公众号](https://gitee.com/coresu/MyPic/blob/master/Blog/公众号.jpg)
