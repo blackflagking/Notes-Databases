@@ -132,7 +132,7 @@
 
 添加我的微信备注“Github”,coresu便会**“通过”**您的好友请求。
 
-![个人微信](./ObjectPic/vxhead.png)
+![个人微信](./Object--Picture/vxhead.png)
 
 大家也可以通过Email的方式联系我，记得在邮件中表明来自GitHub哦😛！  
 ### Email
