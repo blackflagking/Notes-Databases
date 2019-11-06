@@ -87,7 +87,7 @@
 
 * [【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件](./Oracle--OGG/【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件.md)
 * [【OGG】导致单向联通失败的几点原因](./Oracle--OGG/【OGG】导致单向联通失败的几点原因.md)
-* [【OGG】解决运行@ddl_setup.sql时报错及ORA-04098- 触发器 'SYS.GGS_DDL_TRIGGER_BEFORE' 无效](./Oracle--OGG/【OGG】解决运行@ddl_setup.sql时报错及ORA-04098- 触发器 'SYS.GGS_DDL_TRIGGER_BEFORE' 无效.md)
+* [【OGG】解决运行@ddl_setup.sql时报错及ORA-04098-&#32;触发器&#32;'SYS.GGS_DDL_TRIGGER_BEFORE'&#32;无效](./Oracle--OGG/【OGG】解决运行@ddl_setup.sql时报错及ORA-04098-&#32;触发器&#32;'SYS.GGS_DDL_TRIGGER_BEFORE'&#32;无效.md)
 * [【OGG】解读DYNAMICRESOLUTION参数](./Oracle--OGG/【OGG】解读DYNAMICRESOLUTION参数.md)
 
 ### RAC-Real&#32;Application&#32;Cluster
