@@ -2,8 +2,7 @@
 
 
 <p align="center">
-<a href="https://github.com/blackflagking/Notes-Oracle" target="_blank">
-    <img src="https://thumbnail0.baidupcs.com/thumbnail/f2caf679995a2c4470b63ddf72a04083?fid=2977596842-250528-601656470218205&time=1572685200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-z0xnjgf1Dea%2BZd5BTCSX2VZ5SD4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7090963443295851244&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video" width="250"/>
+<a href="https://raw.githubusercontent.com/blackflagking/MyPic/master/Blog/head.jpg" width="250"/>
 </a>
 </p>
 
@@ -13,7 +12,7 @@
   <a href="#微信公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-OracleGuide-lightgrey.svg" alt="公众号"></a>
   <a href="#公众号"><img src="https://img.shields.io/badge/PDF-Oracle面试突击-important.svg" alt="公众号"></a>
   <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
-  <a href=""><img src="https://img.shields.io/badge/Oracle-面试指南-important" alt="投稿"></a>
+  <a href="http://www.lifemini.cn:4000/index.html"><img src="https://img.shields.io/badge/Oracle-个人博客-important" alt="投稿"></a>
 </p>
 
 <h3 align="center">CORESU的BLOG</h3>
@@ -87,7 +86,9 @@
 ### OGG-GoldrenGate
 
 * [【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件](./Oracle--OGG/【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件.md)
-* [【OGG】导致单向联通失败的几点原因](./Oracle--OGG/【【OGG】导致单向联通失败的几点原因.md)
+* [【OGG】导致单向联通失败的几点原因](./Oracle--OGG/【OGG】导致单向联通失败的几点原因.md)
+* [【OGG】解决运行@ddl_setup.sql时报错及ORA-04098- 触发器 'SYS.GGS_DDL_TRIGGER_BEFORE' 无效](./Oracle--OGG/【OGG】解决运行@ddl_setup.sql时报错及ORA-04098- 触发器 'SYS.GGS_DDL_TRIGGER_BEFORE' 无效.md)
+* [【OGG】解读DYNAMICRESOLUTION参数](./Oracle--OGG/【OGG】解读DYNAMICRESOLUTION参数.md)
 
 ### RAC-Real&#32;Application&#32;Cluster
 
@@ -131,7 +132,7 @@
 
 添加我的微信备注“Github”,coresu便会**“通过”**您的好友请求。
 
-![个人微信](https://thumbnail0.baidupcs.com/thumbnail/8a100bc9acacae939f438ac2431346b5?fid=2977596842-250528-815582455701815&time=1572688800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-uTPmitKSJE5X4%2BD39XDqzymEN3E%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7091503216580004742&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![个人微信](https://raw.githubusercontent.com/blackflagking/MyPic/master/Blog/%E5%BE%AE%E4%BF%A1.jpeg)
 
 大家也可以通过Email的方式联系我，记得在邮件中表明来自GitHub哦😛！  
 ### Email
@@ -143,10 +144,10 @@ Email:coresu@icloud.com
 本篇文章的贡献者现在仅有博主一人，期待更多人的加入，让更多人能够爱上数据库。
 
 <a href="https://github.com/blackflagking">
-    <img src="https://thumbnail0.baidupcs.com/thumbnail/f2caf679995a2c4470b63ddf72a04083?fid=2977596842-250528-601656470218205&time=1572685200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-z0xnjgf1Dea%2BZd5BTCSX2VZ5SD4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7090963443295851244&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video" width="45px"></a>
+    <img src="https://raw.githubusercontent.com/blackflagking/MyPic/master/Blog/head.jpg" width="45px"></a>
 
 ### 微信公众号
 
 公众号还在积极筹备中...
 
-![我的公众号](https://thumbnail0.baidupcs.com/thumbnail/81ab6d08c2ee365eac78c27985964708?fid=2977596842-250528-505023496893925&time=1572710400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-rOnyuC43G7QjAUWv6KKdmtcVXBc%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7097424041099893392&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![我的公众号](https://raw.githubusercontent.com/blackflagking/MyPic/master/Blog/%E5%85%AC%E4%BC%97%E5%8F%B7.jpg)
