@@ -44,65 +44,65 @@
 
 ### Oracle学习中常见问题汇总
 
-* [Oracle&#32;materialize&#32;view无法自动刷新问题.md](./Oracle--常见问题/oracle&#32;materialize&#32;view无法自动刷新问题.md)  
-* [Oracle--DBCA起不来的防火墙原因](./Oracle--常见问题/Oracle--DBCA起不来的防火墙原因.md)
-* [Oracle备份恢复之recover&#32;database的四条语句区别](./Oracle--常见问题/Oracle备份恢复之recover&#32;database的四条语句区别.md)
-* [Oracle数据库在truncate不能flashback&#32;table的原因](./Oracle--常见问题/Oracle数据库在truncate不能flashback&#32;table的原因.md)
-* [Oracle查询表空间使用情况以及其他查询](./Oracle--常见问题/Oracle查询表空间使用情况以及其他查询.md)
-* [Oracle正常安装sqlplus命令无法登录](./Oracle--常见问题/Oracle正常安装sqlplus命令无法登录.md)
-* [当数据库出现OC4J&#32;Configuration&#32;issue](./Oracle--常见问题/当数据库出现OC4J&#32;Configuration&#32;issue.md)
-* [恢复数据库后以read&#32;only打开提示recovery的原因](./Oracle--常见问题/恢复数据库后以read&#32;only打开提示recovery的原因.md)
-* [数据泵在调优过程中的作用](./Oracle--常见问题/数据泵在调优过程中的作用.md)
+* [Oracle&#32;materialize&#32;view无法自动刷新问题.md](./Oracle--Database/Oracle--常见问题/oracle&#32;materialize&#32;view无法自动刷新问题.md)  
+* [Oracle--DBCA起不来的防火墙原因](./Oracle--Database/Oracle--常见问题/Oracle--DBCA起不来的防火墙原因.md)
+* [Oracle备份恢复之recover&#32;database的四条语句区别](./Oracle--Database/Oracle--常见问题/Oracle备份恢复之recover&#32;database的四条语句区别.md)
+* [Oracle数据库在truncate不能flashback&#32;table的原因](./Oracle--Database/Oracle--常见问题/Oracle数据库在truncate不能flashback&#32;table的原因.md)
+* [Oracle查询表空间使用情况以及其他查询](./Oracle--Database/Oracle--常见问题/Oracle查询表空间使用情况以及其他查询.md)
+* [Oracle正常安装sqlplus命令无法登录](./Oracle--Database/Oracle--常见问题/Oracle正常安装sqlplus命令无法登录.md)
+* [当数据库出现OC4J&#32;Configuration&#32;issue](./Oracle--Database/Oracle--常见问题/当数据库出现OC4J&#32;Configuration&#32;issue.md)
+* [恢复数据库后以read&#32;only打开提示recovery的原因](./Oracle--Database/Oracle--常见问题/恢复数据库后以read&#32;only打开提示recovery的原因.md)
+* [数据泵在调优过程中的作用](./Oracle--Database/Oracle--常见问题/数据泵在调优过程中的作用.md)
 * [如何查看日志切换的时间](./Oracle--常见问题/如何查看日志切换的时间.md)
-* [诊断Oracle&#32;Redo&#32;Log引发的性能问题](./Oracle--常见问题/诊断Oracle&#32;Redo&#32;Log引发的性能问题.md)
-* [验证表空间是否自动回收空间](./Oracle--常见问题/验证表空间是否自动回收空间.md)
+* [诊断Oracle&#32;Redo&#32;Log引发的性能问题](./Oracle--Database/Oracle--常见问题/诊断Oracle&#32;Redo&#32;Log引发的性能问题.md)
+* [验证表空间是否自动回收空间](./Oracle--Database/Oracle--常见问题/验证表空间是否自动回收空间.md)
 
 ### 体系
 
-* [【体系】--Insert语句在Oracle实例中的的运作流程](./Oracle--体系/【体系】--Insert语句在Oracle实例中的的运作流程.md)
-* [【体系】--select语句在Oracle实例中的运作过程](./Oracle--体系/【体系】--select语句在Oracle实例中的运作过程.md)
-* [【体系】--update语句在Oracle实例中的运作过程](./Oracle--体系/【体系】--update语句在Oracle实例中的运作过程.md)
+* [【体系】--Insert语句在Oracle实例中的的运作流程](./Oracle--Database/Oracle--体系/【体系】--Insert语句在Oracle实例中的的运作流程.md)
+* [【体系】--select语句在Oracle实例中的运作过程](./Oracle--Database/Oracle--体系/【体系】--select语句在Oracle实例中的运作过程.md)
+* [【体系】--update语句在Oracle实例中的运作过程](./Oracle--Database/Oracle--体系/【体系】--update语句在Oracle实例中的运作过程.md)
 
 ### 备份恢复
-* [recover&#32;database&#32;using&#32;backup&#32;control&#32;file报system01.dbf文件修复](./Oracle--备份恢复/recover&#32;database&#32;using&#32;backup&#32;control&#32;file报system01.dbf文件修复.md) 
+* [recover&#32;database&#32;using&#32;backup&#32;control&#32;file报system01.dbf文件修复](./Oracle--Database/Oracle--备份恢复/recover&#32;database&#32;using&#32;backup&#32;control&#32;file报system01.dbf文件修复.md) 
 
 
 ### 实例调优
 
-* [【调优】--解析Direct&#32;Path&#32;Read](./Oracle--调优/【调优】--解析Direct&#32;Path&#32;Read.md)
-* [【调优】--解读10046事件](./Oracle--调优/【【调优】--解读10046事件.md)
-* [【调优】--解读10053事件](./Oracle--调优/【调优】--解读10053事件.md)
-* [【调优】--解读自动维护任务](./Oracle--调优/【调优】--解读自动维护任务.md) 
-* [【调优】--如何优化批量insert数据](./Oracle--调优/【调优】--如何优化批量insert数据.md) 
+* [【调优】--解析Direct&#32;Path&#32;Read](./Oracle--Database/Oracle--调优/【调优】--解析Direct&#32;Path&#32;Read.md)
+* [【调优】--解读10046事件](./Oracle--Database/Oracle--调优/【【调优】--解读10046事件.md)
+* [【调优】--解读10053事件](./Oracle--Database/Oracle--调优/【调优】--解读10053事件.md)
+* [【调优】--解读自动维护任务](./Oracle--Database/Oracle--调优/【调优】--解读自动维护任务.md) 
+* [【调优】--如何优化批量insert数据](./Oracle--Database/Oracle--调优/【调优】--如何优化批量insert数据.md) 
 
 
 ### ASM相关问题
  
-* [ASM的connect的和mounted的区别](./Oracle--ASM/ASM的connect的和mounted的区别.md)
+* [ASM的connect的和mounted的区别](./Oracle--Database/Oracle--ASM/ASM的connect的和mounted的区别.md)
 
 ### DG-DataGuard
 
-* [【DG】v$database的switchover_status字段sessions&#32;active阐述](./Oracle--DG/【DG】v$database的switchover_status字段sessions&#32;active阐述.md)
-* [【DG】防火墙与SELINUX导致的DG主备库失连接](./Oracle--DG/【DG】防火墙与SELINUX导致的DG主备库失连接.md)
+* [【DG】v$database的switchover_status字段sessions&#32;active阐述](./Oracle--Database/Oracle--DG/【DG】v$database的switchover_status字段sessions&#32;active阐述.md)
+* [【DG】防火墙与SELINUX导致的DG主备库失连接](./Oracle--Database/Oracle--DG/【DG】防火墙与SELINUX导致的DG主备库失连接.md)
 
 
 ### OGG-GoldrenGate
 
-* [【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件](./Oracle--OGG/【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件.md)
-* [【OGG】导致单向联通失败的几点原因](./Oracle--OGG/【OGG】导致单向联通失败的几点原因.md)
-* [【OGG】解决运行@ddl_setup.sql时报错及ORA-04098-&#32;触发器&#32;'SYS.GGS_DDL_TRIGGER_BEFORE'&#32;无效](./Oracle--OGG/【OGG】解决运行@ddl_setup.sql时报错及ORA-04098-&#32;触发器&#32;'SYS.GGS_DDL_TRIGGER_BEFORE'&#32;无效.md)
-* [【OGG】解读DYNAMICRESOLUTION参数](./Oracle--OGG/【OGG】解读DYNAMICRESOLUTION参数.md)
+* [【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件](./Oracle--Database/Oracle--OGG/【OGG】OCI&#32;Error&#32;ORA-02291违反完整约束条件.md)
+* [【OGG】导致单向联通失败的几点原因](./Oracle--Database/Oracle--OGG/【OGG】导致单向联通失败的几点原因.md)
+* [【OGG】解决运行@ddl_setup.sql时报错及ORA-04098-&#32;触发器&#32;'SYS.GGS_DDL_TRIGGER_BEFORE'&#32;无效](./Oracle--Database/Oracle--OGG/【OGG】解决运行@ddl_setup.sql时报错及ORA-04098-&#32;触发器&#32;'SYS.GGS_DDL_TRIGGER_BEFORE'&#32;无效.md)
+* [【OGG】解读DYNAMICRESOLUTION参数](./Oracle--Database/Oracle--OGG/【OGG】解读DYNAMICRESOLUTION参数.md)
 
 ### RAC-Real&#32;Application&#32;Cluster
 
-* [【RAC】历史及简介](./Oracle--RAC/【RAC】历史及简介.md)
-* [【RAC】常用命令总结](./Oracle--RAC/【RAC】常用命令总结.md)
-* [【RAC】NFS权限问题root出现Permission&#32;denied](./Oracle--RAC/【RAC】NFS权限问题root出现Permission&#32;denied.md)
-* [【RAC】RAC安装过程提示not&#32;a&#32;shared&#32;subnet错误](./Oracle--RAC/【RAC】RAC安装过程提示not&#32;a&#32;shared&#32;subnet错误.md)
+* [【RAC】历史及简介](./Oracle--Database/Oracle--RAC/【RAC】历史及简介.md)
+* [【RAC】常用命令总结](./Oracle--Database/Oracle--RAC/【RAC】常用命令总结.md)
+* [【RAC】NFS权限问题root出现Permission&#32;denied](./Oracle--Database/Oracle--RAC/【RAC】NFS权限问题root出现Permission&#32;denied.md)
+* [【RAC】RAC安装过程提示not&#32;a&#32;shared&#32;subnet错误](./Oracle--Database/Oracle--RAC/【RAC】RAC安装过程提示not&#32;a&#32;shared&#32;subnet错误.md)
 
 ### Oracle-11g官方文档翻译--HighAvailability高可用 
 
-* ##### [前言](./Oracle--官方文档CoreSu译文/Oracle高可用概述p0.md)
+* ##### [前言](./Oracle--Database/Oracle--官方文档CoreSu译文/Oracle高可用概述p0.md)
 
 
 
