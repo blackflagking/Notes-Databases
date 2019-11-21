@@ -1,4 +1,4 @@
-【2019-11-15】MySQL学习  
+# MySQL数据库简述、安装与修改  
 #### 作者:coresu  
 #### 时间:2019-11-15   
 
@@ -11,8 +11,7 @@
 * [启动MySQL服务器准备](#启动MySQL服务器准备)  
 * [正式启动MySQL服务器](#正式启动MySQL服务器)  
 * [“重要的” MySQL服务器（mysqld）](#“重要的” MySQL服务器（mysqld）)  
-* [简析MySQL磁盘空间](#简析MySQL磁盘空间)  
-* [MySQL系统管理](#MySQL系统管理)
+* [修改MySQL数据库密码](#如何修改MySQL数据库密码)
 
 ### MySQL安装方式分类  
 MySQL安装两种方式:  
@@ -262,37 +261,19 @@ mysqld称为MySQL服务器，是多线程组成的一个单进程程序，支持
 
 > ##### 引擎描述(表格)  
 
-| 磁盘 | 内存 | 网络 | 
-| :--- | :--- | :--- | 
-|innoDB支持事务，多版本一致性读（默认存储引擎）
-MyISAM不支持事务，处理速度更快，会出现脏读现象。 | memory内存引擎，无法永久化存储啊 | NDB将数据存储在网络上 |
+| 类型 | 阐述 |
+| :--- | :--- |
+| 磁盘 |innoDB支持事务，多版本一致性读（默认存储引擎）、MyISAM不支持事务，处理速度更快，会出现脏读现象。 |
+| 内存 | memory内存引擎，无法永久化存储啊 |
+| 网络 |  NDB将数据存储在网络上 |
 
 MySQL在表级做了很多优化，引擎、字符集都坐在了表级别，例如：不同的表可以使用不同的引擎。  
 
 
 
 
-### 简析MySQL磁盘空间  
-ib_logfile0、ib_logfile01两个文件就是系统的日志文件。   
-创建的数据库以目录的形式存在，如：mysql、test、performance_schema。
 
-```
-[root@chris bin]# cd /var/lib/mysql
-
-[root@chris mysql]# ll
-total 110612
--rw-r--r--. 1 root  root       111 Nov 12 19:52 RPM_UPGRADE_HISTORY
--rw-r--r--. 1 mysql mysql      111 Nov 12 19:52 RPM_UPGRADE_MARKER-LAST
--rw-rw----. 1 mysql mysql 50331648 Nov 12 19:52 ib_logfile0
--rw-rw----. 1 mysql mysql 50331648 Nov 12 19:52 ib_logfile1
--rw-rw----. 1 mysql mysql 12582912 Nov 12 19:52 ibdata1
-drwx--x--x. 2 mysql mysql     4096 Nov 12 19:52 mysql
-drwx------. 2 mysql mysql     4096 Nov 12 19:52 performance_schema
-drwxr-xr-x. 2 mysql mysql     4096 Nov 12 19:52 test
-```
-
-
-### MySQL系统管理
+### 修改MySQL数据库密码
 
 ##### 1.查看初始密码  
 ```
@@ -335,7 +316,7 @@ mysql>
 
 ```
 
-##### 3.mysql_secure_installation服务修改密码
+##### 3.mysql_secure_installation服务修改root用户密码
 ```
 [root@chris ~]# mysql_secure_installation
 perl: warning: Setting locale failed.
