@@ -44,7 +44,7 @@
 
 
 ### MongoDB
-* [MongoDB基础](#MongoDB--Database)
+* [MongoDB基础](MongoDB基础)
 
 
 
@@ -134,7 +134,7 @@
 
 
 #
-### MongoDB
+### MongoDB基础
 * [MongoDB初次尝试](./MongoDB--Database/MongoDB初次尝试.md)
 
 
