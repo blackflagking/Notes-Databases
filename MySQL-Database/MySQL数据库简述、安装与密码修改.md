@@ -10,7 +10,7 @@
 * [正式安装MySQL](#正式安装MySQL)   
 * [启动MySQL服务器准备](#启动MySQL服务器准备)  
 * [正式启动MySQL服务器](#正式启动MySQL服务器)  
-* [“重要的” MySQL服务器（mysqld）](#“重要的” MySQL服务器（mysqld）)  
+* [“重要的”MySQL服务器（mysqld）](#“重要的”MySQL服务器（mysqld）)  
 * [修改MySQL数据库密码](#如何修改MySQL数据库密码)
 
 ### MySQL安装方式分类  
@@ -233,7 +233,7 @@ root     31215 22383  0 23:12 pts/1    00:00:00 grep mysqld
 
 
 
-### “重要的” MySQL服务器（mysqld）   
+### “重要的”MySQL服务器（mysqld）   
 ![mysqld三层次](./2019-11-15/pic-mysqldProcess.png)
 
 mysqld称为MySQL服务器，是多线程组成的一个单进程程序，支持并发连接、支持事务和非事务操作。
