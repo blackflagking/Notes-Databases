@@ -4,7 +4,10 @@
 
 
 ### 目录  
-
+[一、实验准备](#一、实验准备)   
+[二、开始实验](#二、开始实验)   
+[三、实验总结](#三、实验总结)   
+[四、【引申实验】](#四、【引申实验】)
 
 ### 一、实验准备  
 #### 主机1：  
@@ -246,6 +249,44 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 #### 主机1
 ```
+[root@chris ~]# vi /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.0.0.0    ogg2
+
+wq保存
+
+[root@chris ~]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.0.0.0 ogg2
+
+
+mysql> flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+```
+
+#### 主机2
+```
+[root@ogg2 ~]# mysql -h 192.168.9.12 -uhosttest -poracle
+Warning: Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 5.6.39 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+```
+##### IP都改成这样可以了，刷完信息表后尽然还能登录！！！惊呆了😮！！
+
+#### 主机1
+```
 [root@chris ~]# cat /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
@@ -255,7 +296,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 Shutting down MySQL..                                      [  OK  ]
 Starting MySQL...                                          [  OK  ]
 ```
-##### 不甘心的我！重启了MySQL数据库服务。
+##### 不甘心的我！再一次的尝试，重启了MySQL数据库服务。
 
 #### 主机2  
 ```
@@ -264,7 +305,7 @@ Warning: Using a password on the command line interface can be insecure.
 ERROR 1045 (28000): Access denied for user 'hosttest'@'192.168.9.99' (using password: YES)
 ```
 
-##### 发现远程客户端无法登陆，猜测可能是MySQL数据库服务没有自动重新读取/etc/hosts文件中的内容到内存中，进而无法被MySQL服务端实例处理。
+##### 终于远程客户端无法登陆，猜测可能是MySQL数据库服务没有自动重新读取/etc/hosts文件中的内容到内存中，进而无法被MySQL服务端实例处理。
 ##### -----至此实验结束！！！-----
 
 
