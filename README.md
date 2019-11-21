@@ -1,4 +1,4 @@
-<h1 align="center">Coresu的Oracle学习笔记</h1>
+<h1 align="center">Coresu的数据库学习笔记</h1>
 
 
 <div align="center">
@@ -114,7 +114,7 @@
 
 
 ### MySQL基础   
-* [MySQL数据库简述、安装与修改](./MySQL-Database/MySQL数据库简述、安装与修改.md)
+* [MySQL数据库简述、安装与修改](./MySQL-Database/MySQL数据库简述、安装与密码修改.md)
 * [MySQL远程登录问题详解](./MySQL-Database/MySQL远程登录问题.md)
 
 
